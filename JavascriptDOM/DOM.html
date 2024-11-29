@@ -1,0 +1,23 @@
+<html>
+    <body>
+    <div id="parent"></div>    
+    </body>
+</html>
+<script>
+    console.log(document.documentElement.innerHTML)
+    
+
+
+    var div = "<div >This is a div</div><button id='btn'>Submit</button>";
+    document.getElementById("parent").innerHTML =div;
+// 
+
+// 
+// 
+var button = document.getElementById("btn");
+button.onclick = function()
+{
+    alert("you clicked me ?!")
+}
+
+</script>

@@ -1,0 +1,50 @@
+<html>
+    <body>
+            < id="btnTest" value="Test button" title="Test button"> Test Button </button>
+    </body>
+</html>
+<script>
+        var element = document.getElementById("btnTest");
+    element.onclick = function (e){
+            alert ("I am clicked")
+
+    }
+
+    function addAll(n) {
+
+    var sum = 0;
+    console.log("Displaying first argument " + arguments[0])
+    console.log("Displaying first argument " + n)    
+    // for (var i = 0; i < arguments.length; i++) {
+    //     sum += arguments[i];
+    // }
+    return sum;
+}
+console.log(addAll(1))
+
+
+
+
+// //object level binding
+function printMe() {
+    alert("I am " + this.name );
+ }
+// var o = ({toString: function(){return "!"}});
+
+var teacher = {
+    name: "developer",
+    insidefunction : printMe
+
+}
+
+ teacher.print = printMe;
+
+student = {
+    name: "student"
+}
+ //printMe.apply(student)
+
+teacher.insidefunction.apply(student)
+
+
+</script>
